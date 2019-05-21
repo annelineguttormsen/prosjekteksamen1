@@ -1,7 +1,6 @@
 html {
   background:#191919;
   box-shadow:inset 0px 2px 40px #010101;
-  height:100%;
 }
 * {
   margin:0;
@@ -52,17 +51,44 @@ h1,h2,h3 {
   padding:20px;
   margin:0 auto;
 }
-.header ul {
+.header ul, .footer ul {
   list-style-type:none;
 }
 .header ul li {
   display:inline-block;
 }
-.header ul li a {
+.header ul li a, .footer ul li {
   text-decoration:none;
   padding:10px 15px;
   color:#fff;
   display:block;
+}
+.intro {
+  padding:50px 0px;
+}
+.intro h1 {
+  font-size:42px;
+  text-align:center;
+}
+.intro img {
+  margin-left:200px;
+}
+@keyframes hopp {
+  0%,100% {
+    margin-top:0;
+    margin-bottom:25px;
+  }
+  50% {
+    margin-top:25px;
+    margin-bottom:0px;
+  }
+}
+#rocket-animate {
+  transform:rotate(45deg);
+  animation:hopp 5s infinite;
+}
+.footer ul li img {
+  width:200px;
 }
 @media only screen and (max-width:1320px) {
   .col-t-12 {
