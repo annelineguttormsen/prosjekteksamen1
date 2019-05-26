@@ -1,0 +1,13 @@
+input {
+  margin-bottom:20px;
+  padding:10px;
+  border-radius:25px;
+  outline:none;
+  border:none;
+}
+textarea[name="formText"] {
+  width:50%;
+}
+input[type="submit"] {
+  display:block;
+}
