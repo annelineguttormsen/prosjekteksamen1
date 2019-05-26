@@ -8,16 +8,14 @@
   vertical-align:top;
   display:inline-block;
   transition:background .15s linear;
+  text-decoration:none;
+  color:#fff;
+  padding:20px;
+  font-size:12px;
+  cursor:pointer;
 }
 .archive-list ul li:hover {
   background:rgba(110,110,110,0.5);
-}
-.archive-list ul li a {
-  display:block;
-  text-decoration:none!important;
-  color:#fff!important;
-  padding:20px;
-  font-size:12px;
 }
 .archive-info {
   background:lightblue;
