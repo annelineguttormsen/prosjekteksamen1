@@ -1,13 +1,23 @@
-input {
+p {
+  margin-bottom:5px;
+}
+input, textarea[name="formText"] {
   margin-bottom:20px;
   padding:10px;
   border-radius:25px;
+  width:250px;
   outline:none;
   border:none;
+  font-family:Open Sans, Helvetica, sans-serif;
 }
 textarea[name="formText"] {
   width:50%;
+  height:250px;
+  resize:none;
 }
 input[type="submit"] {
   display:block;
+  cursor:pointer;
+  width:auto;
+  padding:10px 30px;
 }
