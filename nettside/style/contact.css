@@ -12,6 +12,7 @@ input, textarea {
   outline:none;
   border:none;
   font-family:Open Sans, Helvetica, sans-serif;
+  box-sizing:border-box;
 }
 textarea {
   width:50%;
@@ -32,4 +33,14 @@ input[type="button"] {
 #error p {
   color:#E33009;
   margin:0;
+}
+@media only screen and (max-width:960px) {
+  textarea {
+    width:75%;
+  }
+}
+@media only screen and (max-width:731px) {
+  input, textarea {
+    width:100%;
+  }
 }

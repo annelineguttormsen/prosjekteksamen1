@@ -69,6 +69,7 @@ button a {
   width:1320px;
   padding:20px;
   margin:0 auto;
+  transition:padding .1s linear;
 }
 .header ul, .footer ul {
   list-style-type:none;
@@ -120,5 +121,7 @@ button a {
   }
 }
 @media only screen and (max-width:731px) {
-
+  .site-wrap {
+    padding:20px 7px;
+  }
 }
