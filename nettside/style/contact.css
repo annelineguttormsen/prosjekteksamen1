@@ -1,23 +1,35 @@
 p {
   margin-bottom:5px;
 }
-input, textarea[name="formText"] {
+p span {
+  color:#E33009;
+}
+input, textarea {
   margin-bottom:20px;
   padding:10px;
-  border-radius:25px;
+  border-radius:20px;
   width:250px;
   outline:none;
   border:none;
   font-family:Open Sans, Helvetica, sans-serif;
 }
-textarea[name="formText"] {
+textarea {
   width:50%;
   height:250px;
   resize:none;
 }
-input[type="submit"] {
+input[type="button"] {
   display:block;
   cursor:pointer;
   width:auto;
   padding:10px 30px;
+  background:#E33009;
+  box-shadow:0px 4px #a52103;
+  border-radius:20px;
+  color:#fff;
+  font-weight:700;
+}
+#error p {
+  color:#E33009;
+  margin:0;
 }

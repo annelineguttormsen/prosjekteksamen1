@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="style/contact.css">
     <link href="https://fonts.googleapis.com/css?family=Domine|Open+Sans&display=swap" rel="stylesheet">
     <script type="text/javascript" src="script/mainscript.js" defer></script>
+    <script type="text/javascript" src="script/contact.js" defer></script>
 </head>
 <body>
   <div class="col-t-12 site-wrap">
@@ -22,15 +23,16 @@
       <h2>Any questions? Contact us!</h2>
       <form>
         <p>Full name:</p>
-        <input type="text" name="formName">
-        <p>E-mail:</p>
-        <input type="text" name="formEmail">
-        <p>Telephone:</p>
-        <input type="text" maxlength="20" name="formTelephone">
-        <p>Your message:</p>
-        <textarea name="formText" maxlength="500"></textarea>
-        <input type="submit">
+        <input type="text" id="formName" maxlength="50">
+        <p>E-mail: <span>*</span></p>
+        <input type="text" id="formEmail">
+        <p>Telephone: <span>*</span></p>
+        <input type="text" maxlength="20" id="formTelephone">
+        <p>Your message: <span>*</span></p>
+        <textarea id="formText" maxlength="500"></textarea>
+        <input type="button" id="submitButton" value="Submit">
       </form>
+      <div id="error"></div>
     </div><!--end intro-->
     <div class="col-12 footer">
       <!--<ul>
