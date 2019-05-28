@@ -29,6 +29,12 @@ input[type="button"] {
   border-radius:20px;
   color:#fff;
   font-weight:700;
+  position:relative;
+}
+input[type="button"]:active {
+  top:4px;
+  box-shadow:none;
+  background:#a52103;
 }
 #error p {
   color:#E33009;
@@ -40,7 +46,13 @@ input[type="button"] {
   }
 }
 @media only screen and (max-width:731px) {
+  h2 {
+    text-align:center;
+  }
   input, textarea {
+    width:100%;
+  }
+  input[type="button"] {
     width:100%;
   }
 }

@@ -8,6 +8,7 @@ html {
 p, ul li, button {
   font-family:Open Sans, Helvetica, sans-serif;
   color:#fff;
+  font-size:16px;
 }
 h1,h2,h3 {
   font-family:Domine, serif;
@@ -25,12 +26,18 @@ button {
   border:none;
   padding:10px 30px;
   font-size:16px;
+  position:relative;
 }
 button a {
   display:block;
   text-decoration:none;
   color:#fff;
   font-weight:700;
+}
+button:active {
+  top:4px;
+  box-shadow:none;
+  background:#a52103;
 }
 .active {
   border-bottom:1px solid #fff;
@@ -121,6 +128,9 @@ button a {
   }
 }
 @media only screen and (max-width:731px) {
+  p, ul li, button {
+    font-size:14px;
+  }
   .site-wrap {
     padding:20px 7px;
   }
