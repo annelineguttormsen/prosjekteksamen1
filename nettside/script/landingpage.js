@@ -1,6 +1,4 @@
-var missionName = document.getElementById("mission-name");
-var rocketName = document.getElementById("rocket-name");
-var launchDetails = document.getElementById("launch-details");
+var launchCounter = document.getElementsByClassName("launch-counter")[0];
 var data;
 
   if (window.XMLHttpRequest) {
@@ -15,7 +13,7 @@ var data;
           if(this.status == 200) {
               data = JSON.parse(xhr.responseText);
               //her går eventuelle funksjoner
-              implementLaunches();
+              implementLaunchTime();
           }
           else {
               console.log("Fil ikke funnet 404");
@@ -25,8 +23,18 @@ var data;
   xhr.open("GET",url,true);
   xhr.send();
 
-function implementLaunches() {
-  missionName.innerHTML  = "<b>Mission name: </b>" + data["mission_name"];
-  rocketName.innerHTML = "<b>Rocket name: </b>" + data["rocket"]["rocket_name"];
-  launchDetails.innerHTML = data["details"];
+function implementLaunchTime() {
+
 }
+
+var hbIcon = document.getElementById("hb-icon");
+var headerMenu = document.getElementById("header-menu");
+
+hbIcon.addEventListener("click",
+function() {
+  if (headerMenu.style.display == "none") {
+    headerMenu.style.display == "block";
+  } else {
+    headerMenu.style.display == "none";
+  }
+console.log("function called")});

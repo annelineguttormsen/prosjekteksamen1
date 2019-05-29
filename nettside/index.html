@@ -8,12 +8,13 @@
     <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/37/37041.png">
     <link rel="stylesheet" type="text/css" href="style/mainstyle.css">
     <link href="https://fonts.googleapis.com/css?family=Domine|Open+Sans&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="script/launches.js" defer></script>
+    <script type="text/javascript" src="script/landingpage.js" defer></script>
 </head>
 <body>
   <div class="col-d-12 site-wrap">
     <div class="col-12 header">
-      <ul>
+      <img id="hb-icon" src="https://image.flaticon.com/icons/png/512/37/37041.png">
+      <ul id="header-menu">
         <li><a href="index.html" class="active">Home</a></li><li><a href="archive.html">Archive</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -22,24 +23,12 @@
       <div class="col-6 col-t-8 col-m-12 intro-text">
         <p>SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</p>
        <p>This site is dedicated to SpaceX launches, missions and history.</p>
-      </div>
-      <button><a href="archive.html">Explore SpaceX' history</a></button>
+       <button><a href="archive.html">Explore SpaceX' history</a></button>
+      </div><div class="col-6 col-m-12 intro-img">
+      <img id="rocket-animate" src="media/rocket.svg"></div>
     </div><!--end intro-->
     <div class="col-12 launch-counter">
-      <div class="col-6 col-m-12 launch-text">
-      <h1>00:00:00</h1>
-      <h2>Next upcoming launch</h2>
-      <div id="launch-info">
-        <p id="mission-name"></p><p id="rocket-name"></p><p id="launch-details"></p>
-      </div>
-      </div><div class="col-6 col-m-12 launch-img">
-      <img id="rocket-animate" src="media/rocket.svg"></div>
-    </div>
-    <div class="col-12 footer">
-      <!--<ul>
-        <li><img src="media/spacex-logo.svg"></li>
-        <li><img src="https://res.cloudinary.com/postman/image/upload/w_152,h_56,c_fit,f_auto,t_team_logo/v1/team/f779d383594544821972cfeeb9e4ae5e6df43d0039f79c28d50555557d51fbc0"></li>
-      </ul>-->
+
     </div>
   </div><!--end site-wrap-->
 </body>

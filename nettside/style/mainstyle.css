@@ -10,6 +10,9 @@ p, ul li, button {
   color:#fff;
   font-size:16px;
 }
+a {
+  color:#E33009;
+}
 h1,h2,h3 {
   font-family:Domine, serif;
   color:#FDD923;
@@ -79,8 +82,12 @@ button:active {
   transition:padding .1s linear;
   box-sizing:border-box;
 }
-.header ul, .footer ul {
+.header ul {
+  text-align:center;
   list-style-type:none;
+}
+#header-menu {
+  display:block;
 }
 .header ul li {
   display:inline-block;
@@ -91,14 +98,27 @@ button:active {
   color:#fff;
   display:block;
 }
+#hb-icon {
+  width:25px;
+  margin:0 auto;
+  display:block;
+}
 .intro {
   padding:50px 0px;
 }
+.intro-text, .intro-img {
+  display:inline-block;
+  vertical-align:top;
+}
 .intro h1 {
   font-size:42px;
+  margin-bottom:40px;
 }
-.intro-text {
-  margin:50px 0px;
+.intro p {
+  margin-bottom:30px;
+}
+.intro-img img {
+  width:60%;
 }
 .launch-counter {
   margin:0 auto;
@@ -107,19 +127,6 @@ button:active {
 }
 .launch-counter h2 {
   color:#fff;
-}
-.launch-text, .launch-img {
-  display:inline-block;
-  vertical-align:top;
-}
-#launch-info {
-  margin-bottom:20px;
-}
-.launch-text p {
-  margin:0px;
-}
-.launch-img img {
-  width:60%;
 }
 @keyframes hopp {
   0%,100% {
@@ -133,9 +140,6 @@ button:active {
 }
 #rocket-animate {
   animation:hopp 5s infinite;
-}
-.footer ul li img {
-  width:200px;
 }
 @media only screen and (max-width:1320px) {
   .col-d-12 {
@@ -215,4 +219,16 @@ button:active {
     margin-bottom:10px;
     font-size:28px;
   }
+}
+@media only screen and (max-width:400px) {
+  .header ul {
+    display:none;
+  }
+  #hb-icon {
+    display:block;
+  }
+  .header ul li {
+    display:block;
+  }
+
 }
