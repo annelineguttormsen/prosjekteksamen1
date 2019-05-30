@@ -1,11 +1,10 @@
-p {
+.intro p {
   margin-bottom:5px;
 }
 p span {
   color:#E33009;
 }
 input, textarea {
-  margin-bottom:20px;
   padding:10px;
   border-radius:20px;
   width:250px;
@@ -13,11 +12,21 @@ input, textarea {
   border:none;
   font-family:Open Sans, Helvetica, sans-serif;
   box-sizing:border-box;
+  border:2px solid #fff;
+}
+input:focus, textarea:focus {
+  border:2px solid #E33009;
 }
 textarea {
   width:50%;
   height:250px;
   resize:none;
+}
+.input-tip, .textarea-tip {
+  width:100%;
+  height:auto;
+  padding:5px 0px;
+  visibility:hidden;
 }
 input[type="button"] {
   display:block;
@@ -25,6 +34,7 @@ input[type="button"] {
   width:auto;
   padding:10px 30px;
   background:#E33009;
+  border:2px solid #E33009;
   box-shadow:0px 4px #a52103;
   border-radius:20px;
   color:#fff;
@@ -35,6 +45,10 @@ input[type="button"]:active {
   top:4px;
   box-shadow:none;
   background:#a52103;
+  border:2px solid #a52103;
+}
+input[type="button"]:focus {
+  border:2px solid #74a2ed;
 }
 #error p {
   color:#E33009;

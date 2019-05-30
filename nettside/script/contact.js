@@ -1,11 +1,14 @@
 var submitButton = document.getElementById("submitButton");
-var errorElement = document.getElementById("error");
 var formElement = document.getElementsByTagName("form")[0];
 
 var name = document.getElementById("formName");
 var email = document.getElementById("formEmail");
 var phone = document.getElementById("formTelephone");
 var text = document.getElementById("formText");
+
+var tipEmail = document.getElementsByClassName("input-email")[0];
+var tipPhone = document.getElementsByClassName("input-phone")[0];
+var tipMsg = document.getElementsByClassName("textarea-tip")[0];
 
 var emptyInput = /\w/;
 //var emailRX = /^[a-zA-Z0-9.-]+@[a-zA-Z0-9].\w{2,3}$/i;
@@ -16,16 +19,16 @@ submitButton.addEventListener("click",checkInput);
 
 //functions
 function checkInput() {
-  errorElement.innerHTML = "";
-  checkRegex(emailRX,email,"Form must include a valid e-mail");
-  checkRegex(phoneRX,phone,"Form must include a valid phone number");
-  checkRegex(emptyInput,text,"Form must include message")
-  if (errorElement.innerHTML == "") {
-    formElement.innerHTML = "<p style='color:#fff'>Thanks for your message! We'll get back to you soon.</p>"
-  }
+  tipEmail.style.visibility = "hidden";
+  tipPhone.style.visibility = "hidden";
+  tipMsg.style.visibility = "hidden";
+  checkRegex(emailRX,email,tipEmail);
+  checkRegex(phoneRX,phone,tipPhone);
+  checkRegex(emptyInput,text,tipMsg);
+
 }
-function checkRegex(regex,element,errorMessage) {
+function checkRegex(regex,element,tipElement) {
   if (regex.test(element.value) == false) {
-      errorElement.innerHTML += ("<p>" + errorMessage + "</p>");
+      tipElement.style.visibility = "visible";
   }else {return;}
 }

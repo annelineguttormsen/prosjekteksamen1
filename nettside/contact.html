@@ -24,15 +24,18 @@
       <form>
         <p>Full name:</p>
         <input type="text" id="formName" maxlength="50">
+        <div class="input-tip"><p><span>Form must include valid name</span></p></div>
         <p>E-mail: <span>*</span></p>
         <input type="text" id="formEmail">
+        <div class="input-tip input-email"><p><span>Form must include a valid e-mail (example@example.com)</span></p></div>
         <p>Telephone: <span>*</span></p>
         <input type="text" maxlength="20" id="formTelephone">
+        <div class="input-tip input-phone"><p><span>Form must include a valid phone number (Norwegian phone number)</span></p></div>
         <p>Your message: <span>*</span></p>
         <textarea id="formText" maxlength="500"></textarea>
+        <div class="textarea-tip"><p><span>Form must include a message</span></p></div>
         <input type="button" id="submitButton" value="Submit">
       </form>
-      <div id="error"></div>
     </div><!--end intro-->
   </div><!--end site-wrap-->
 </body>

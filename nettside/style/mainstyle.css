@@ -76,18 +76,14 @@ button:active {
     width:16%;
 }
 .site-wrap {
-  width:1320px;
+  width:960px;
   padding:20px;
   margin:0 auto;
-  transition:padding .1s linear;
   box-sizing:border-box;
 }
 .header ul {
   text-align:center;
   list-style-type:none;
-}
-#header-menu {
-  display:block;
 }
 .header ul li {
   display:inline-block;
@@ -101,7 +97,7 @@ button:active {
 #hb-icon {
   width:25px;
   margin:0 auto;
-  display:block;
+  display:none;
 }
 .intro {
   padding:50px 0px;
@@ -208,6 +204,9 @@ button:active {
   }
   p, ul li, button {
     font-size:14px;
+  }
+  .header ul {
+    display:block;
   }
   .intro {
     padding:20px 0px;
