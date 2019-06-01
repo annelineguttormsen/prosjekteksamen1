@@ -18,6 +18,9 @@ h1,h2,h3 {
   color:#FDD923;
   margin-bottom:20px;
 }
+h1 {
+  font-size:42px;
+}
 p {
   margin-bottom:20px;
 }
@@ -106,20 +109,15 @@ button:active {
   display:inline-block;
   vertical-align:top;
 }
-.intro h1 {
-  font-size:42px;
-  margin-bottom:40px;
-}
-.intro p {
-  margin-bottom:30px;
-}
 .intro-img img {
   width:60%;
 }
 .launch-counter {
-  margin:0 auto;
   padding:20px 0px;
-  height:300px;
+  text-align:center;
+}
+.launch-counter h1 {
+  font-size:72px;
 }
 .launch-counter h2 {
   color:#fff;
