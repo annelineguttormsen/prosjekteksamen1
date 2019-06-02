@@ -40,18 +40,55 @@ function getArchive(urlArg) {
 }
 
 function implementHistory() {
-  /*archiveDiv.innerHTML = "";
+  archiveDiv.innerHTML = "";
   for (var i in data) {
-    archiveDiv.innerHTML
-  }*/
-  console.log("history");
+    var archiveRow = document.createElement("div");
+    archiveRow.setAttribute("class","archive-row");
+    makeElement("h1",data[i].title,archiveRow);
+    makeElement("p",data[i].details,archiveRow);
+    makeElement("a","Article",archiveRow,"href",data[i].links.article);
+    archiveRow.setAttribute("class","archive-row");
+    archiveDiv.appendChild(archiveRow);
+  }
 }
 function implementRockets() {
-  console.log("rockets");
+  archiveDiv.innerHTML = "";
+  for (var i in data) {
+    var archiveRow = document.createElement("div");
+    archiveRow.setAttribute("class","archive-row");
+    makeElement("h1",data[i].rocket_name,archiveRow);
+    makeElement("p",data[i].description,archiveRow);
+    makeElement("img",null,archiveRow,"src",data[i].flickr_images[0]);
+    archiveDiv.appendChild(archiveRow);
+  }
 }
 function implementMissions() {
-  console.log("missions");
+  archiveDiv.innerHTML = "";
+  for (var i in data) {
+    var archiveRow = document.createElement("div");
+    archiveRow.setAttribute("class","archive-row");
+    makeElement("h1",data[i].mission_name,archiveRow);
+    makeElement("p",data[i].description,archiveRow);
+    archiveDiv.appendChild(archiveRow);
+  }
 }
 function implementLaunches() {
-  console.log("launches");
+  archiveDiv.innerHTML = "";
+  for (var i in data) {
+    var archiveRow = document.createElement("div");
+    archiveRow.setAttribute("class","archive-row");
+    makeElement("h1",data[i].mission_name,archiveRow);
+    makeElement("img",null,archiveRow,"src",data[i].links.mission_patch_small);
+    makeElement("p",data[i].details,archiveRow);
+    archiveDiv.appendChild(archiveRow);
+  }
+}
+
+function makeElement(elementType, content, parentElement, attr, attrContent) {
+  var element = document.createElement(elementType);
+  if (attr !== undefined && attrContent !== undefined) {
+    element.setAttribute(attr,attrContent);
+  }
+  element.innerHTML = content;
+  parentElement.appendChild(element);
 }
