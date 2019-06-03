@@ -85,13 +85,14 @@ button:active {
   box-sizing:border-box;
 }
 .header ul {
+  display:block;
   text-align:center;
   list-style-type:none;
 }
 .header ul li {
   display:inline-block;
 }
-.header ul li a, .footer ul li {
+.header ul li a {
   text-decoration:none;
   padding:10px 15px;
   color:#fff;
@@ -101,6 +102,12 @@ button:active {
   width:25px;
   margin:0 auto;
   display:none;
+}
+#hb-icon:focus {
+  outline:#E33009;
+}
+#hb-icon img {
+  width:100%;
 }
 .intro {
   padding:50px 0px;
