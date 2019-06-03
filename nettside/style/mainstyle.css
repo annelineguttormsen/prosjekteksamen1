@@ -16,10 +16,6 @@ a {
 h1,h2,h3 {
   font-family:Domine, serif;
   color:#FDD923;
-  margin-bottom:10px;
-}
-h1 {
-  font-size:42px;
 }
 p {
   margin-bottom:20px;
@@ -33,6 +29,7 @@ button {
   padding:10px 30px;
   font-size:16px;
   position:relative;
+  display:block;
 }
 button a {
   display:block;
@@ -81,8 +78,14 @@ button:active {
 .site-wrap {
   width:960px;
   padding:20px;
+  z-index:1;
   margin:0 auto;
   box-sizing:border-box;
+}
+.header {
+  margin-top:20px;
+  position:relative;
+  z-index:2;
 }
 .header ul {
   display:block;
@@ -112,16 +115,18 @@ button:active {
 .intro {
   padding:50px 0px;
 }
+.intro h2 {
+  text-align:center;
+  color:#fff;
+  margin-bottom:40px;
+}
 .launch-counter {
-  padding:20px 0px;
   text-align:center;
 }
 .launch-counter h1 {
   font-size:72px;
-}
-.launch-counter h2 {
-  color:#fff;
-}
+  margin-bottom:30px;
+}   
 @keyframes hopp {
   0%,100% {
     margin-top:0;
@@ -169,7 +174,7 @@ button:active {
       width:16%;
   }
   .intro h1 {
-    font-size:36px;
+    font-size:62px;
   }
 }
 @media only screen and (max-width:731px) {
@@ -214,7 +219,7 @@ button:active {
   }
   .intro h1 {
     margin-bottom:10px;
-    font-size:28px;
+    font-size:48px;
   }
 }
 @media only screen and (max-width:400px) {
@@ -224,8 +229,14 @@ button:active {
   #hb-icon {
     display:block;
   }
+  .active {
+    border-bottom:none;
+    background:rgba(110,110,110,0.5);
+  }
   .header ul li {
     display:block;
   }
-
+  .intro h1 {
+    font-size:28px;
+  }
 }

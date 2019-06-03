@@ -16,7 +16,6 @@ var data;
           if(this.status == 200) {
               data = JSON.parse(xhr.responseText);
               var update = setInterval(implementLaunchTime,500);
-              console.log("jeg har funnet " + data);
           }
           else {
               console.log("Fil ikke funnet 404");
