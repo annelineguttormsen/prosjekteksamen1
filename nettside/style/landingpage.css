@@ -10,3 +10,16 @@
 .intro-img {
   margin:0 auto;
 }
+.intro h2 {
+  text-align:center;
+  color:#fff;
+  margin-bottom:40px;
+}
+.launch-counter {
+  text-align:center;
+}
+.launch-counter h1 {
+  font-size:72px;
+  height:100px;
+  margin:30px 0px;
+} 
