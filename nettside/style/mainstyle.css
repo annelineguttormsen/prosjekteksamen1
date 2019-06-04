@@ -92,6 +92,7 @@ button:active {
   display:block;
   text-align:center;
   list-style-type:none;
+  background:#191919;
 }
 .header ul li {
   display:inline-block;
@@ -162,9 +163,6 @@ button:active {
   .col-t-2 {
       width:16%;
   }
-  .intro h1 {
-    font-size:62px;
-  }
 }
 @media only screen and (max-width:731px) {
   .col-m-12 {
@@ -205,10 +203,6 @@ button:active {
   }
   .intro-text {
     margin:10px 0px;
-  }
-  .intro h1 {
-    margin-bottom:10px;
-    font-size:48px;
   }
 }
 @media only screen and (max-width:400px) {
