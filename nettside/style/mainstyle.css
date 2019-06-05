@@ -20,6 +20,9 @@ h1,h2,h3 {
 p {
   margin-bottom:20px;
 }
+b {
+  color:#FDD923;
+}
 button {
   background:#E33009;
   border-radius:20px;

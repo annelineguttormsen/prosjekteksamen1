@@ -23,20 +23,30 @@
           </ul>
       </div>
     <div class="col-12 intro">
-      <p>SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</p>
       <div class="col-12 archive-wrap">
         <div class="col-12 archive-list">
-          <ul>
-            <li onclick="getArchive('history')">History</li>
-            <li onclick="getArchive('rockets')">Rockets</li>
-            <li onclick="getArchive('missions')">Missions</li>
-            <li onclick="getArchive('launches')">Launches</li>
-          </ul>
-        </div><div class="col-12 archive-info">
+          <!--<ul>
 
+          </ul>
+          <select class="col-12">
+            <option value="launches" onclick="getArchive('launches')">Launches</option>
+            <option value="history">History</option>
+            <option value="rockets">Rockets</option>
+            <option value="missions">Missions</option>
+          </select>-->
+          <div class="col-12 select">
+            <p>Launches</p>
+            <ul class="options">
+              <li onclick="getArchive('launches')">Launches</li>
+              <li onclick="getArchive('history')">History</li>
+              <li onclick="getArchive('rockets')">Rockets</li>
+              <li onclick="getArchive('missions')">Missions</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div><!--end intro-->
+    <div class="col-12 archive-info"></div>
   </div><!--end site-wrap-->
 </body>
 </html>

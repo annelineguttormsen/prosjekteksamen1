@@ -78,8 +78,15 @@ function implementLaunches() {
     var archiveRow = document.createElement("div");
     archiveRow.setAttribute("class","archive-row");
     makeElement("h1",data[i].mission_name,archiveRow);
-    makeElement("img",null,archiveRow,"src",data[i].links.mission_patch_small);
-    makeElement("p",data[i].details,archiveRow);
+    if(data[i].links.mission_patch_small !== null) {
+      makeElement("img",null,archiveRow,"src",data[i].links.mission_patch_small);
+    }
+    if (data[i].details !== null) {
+      makeElement("p",("<b>Details: </b>" + data[i].details),archiveRow);
+    } else {
+      makeElement("p","<b>Details</b>: No details available yet", archiveRow);
+    }
+    makeElement("p",("<b>Launch year: </b>" + data[i].launch_year), archiveRow);
     archiveDiv.appendChild(archiveRow);
   }
 }
@@ -92,3 +99,5 @@ function makeElement(elementType, content, parentElement, attr, attrContent) {
   element.innerHTML = content;
   parentElement.appendChild(element);
 }
+
+getArchive("launches");
