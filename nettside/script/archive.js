@@ -1,5 +1,8 @@
 var archiveDiv = document.getElementsByClassName("archive-info")[0];
 
+var selectEl = document.getElementsByClassName("select")[0];
+var optionsEl = document.getElementsByClassName("options")[0];
+
 var baseUrl = "https://api.spacexdata.com/v3/";
 var data;
 
@@ -81,12 +84,17 @@ function implementLaunches() {
     if(data[i].links.mission_patch_small !== null) {
       makeElement("img",null,archiveRow,"src",data[i].links.mission_patch_small);
     }
+    makeElement("p",("<b>Rocket: </b>" + data[i].rocket.rocket_name),archiveRow);
+    makeElement("p",("<b>Launch site: </b>" + data[i].launch_site.site_name_long),archiveRow);
     if (data[i].details !== null) {
       makeElement("p",("<b>Details: </b>" + data[i].details),archiveRow);
     } else {
-      makeElement("p","<b>Details</b>: No details available yet", archiveRow);
+      makeElement("p","<b>Details</b>: No details available", archiveRow);
     }
     makeElement("p",("<b>Launch year: </b>" + data[i].launch_year), archiveRow);
+    if (data[i].links.article_link !== null) {
+      makeElement("a",(data[i].mission_name + " launch article"),archiveRow,"href",data[i].links.article_link);
+    }
     archiveDiv.appendChild(archiveRow);
   }
 }
