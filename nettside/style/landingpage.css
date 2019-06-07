@@ -10,6 +10,11 @@
 .intro-img {
   margin:0 auto;
 }
+.intro h1 {
+  font-size:72px;
+  height:75px;
+  margin:20px 0px;
+}
 .intro h2 {
   text-align:center;
   color:#fff;
@@ -17,12 +22,6 @@
 }
 .launch-counter {
   text-align:center;
-}
-.launch-counter h1 {
-  font-size:72px;
-  height:75px;
-  padding:10px 0px;
-  margin:20px 0px;
 }
 @media only screen and (max-width:960px) {
   .intro h1 {
@@ -32,5 +31,14 @@
 @media only screen and (max-width:731px) {
   .intro h1 {
     font-size:48px;
+    margin:10px 0px;
+  }
+  .intro h2 {
+    margin-bottom:20px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .intro h1 {
+    font-size:28px;
   }
 }

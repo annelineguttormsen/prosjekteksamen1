@@ -204,9 +204,6 @@ button:active {
   .intro {
     padding:20px 0px;
   }
-  .intro-text {
-    margin:10px 0px;
-  }
 }
 @media only screen and (max-width:400px) {
   .header ul {
