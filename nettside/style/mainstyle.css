@@ -206,6 +206,9 @@ button:active {
   }
 }
 @media only screen and (max-width:400px) {
+  .site-wrap {
+    padding:10px;
+  }
   .header ul {
     display:none;
   }

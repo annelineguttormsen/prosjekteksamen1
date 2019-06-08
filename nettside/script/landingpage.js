@@ -1,8 +1,14 @@
-var launchCounter = document.getElementsByClassName("launch-counter")[0];
 var launchDate;
 var today;
 var launchDifference;
 var data;
+
+//elementer
+var lDays = document.getElementsByClassName("launch-days")[0];
+var lHours = document.getElementsByClassName("launch-hours")[0];
+var lMinutes = document.getElementsByClassName("launch-minutes")[0];
+var lSeconds = document.getElementsByClassName("launch-seconds")[0];
+
 
   if (window.XMLHttpRequest) {
       var xhr = new XMLHttpRequest();
@@ -33,5 +39,9 @@ function implementLaunchTime() {
   var hours = Math.floor((launchDifference%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
   var minutes = Math.floor((launchDifference%(1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((launchDifference%(1000 * 60)) / 1000);
-  launchCounter.innerHTML = "<h1>" + days + "d: " + hours + "h: " + minutes + "m: " + seconds + "s</h1>";
+
+  lDays.innerHTML = "<h1>" + days + "</h1>";
+  lHours.innerHTML = "<h1>" + hours + "</h1>";
+  lMinutes.innerHTML = "<h1>" + minutes + "</h1>";
+  lSeconds.innerHTML = "<h1>" + seconds + "</h1>";
 }
