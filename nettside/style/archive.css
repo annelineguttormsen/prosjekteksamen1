@@ -58,11 +58,3 @@
   height:100%;
   background:#fff;
 }
-@media only screen and (max-width:731px) {
-  .archive-info img {
-    max-width:100%;
-  }
-  .archive-row p {
-    width:100%;
-  }
-}
