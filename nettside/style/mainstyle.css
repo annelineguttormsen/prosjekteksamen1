@@ -16,6 +16,7 @@ a {
 h1,h2,h3 {
   font-family:Domine, serif;
   color:#FDD923;
+  margin-bottom:20px;
 }
 p {
   margin-bottom:20px;
@@ -49,34 +50,34 @@ button:active {
   border-bottom:1px solid #fff;
 }
 [class^="col"] {
-    box-sizing:border-box;
+  box-sizing:border-box;
 }
 .col-12 {
-    width:100%;
+  width:100%;
 }
 .col-10 {
-    width:83%;
+  width:83%;
 }
 .col-9 {
-    width:75%;
+  width:75%;
 }
 .col-8 {
-    width:66%;
+  width:66%;
 }
 .col-6 {
-    width:50%;
+  width:50%;
 }
 .col-5 {
-    width:41%;
+  width:41%;
 }
 .col-4 {
-    width:33%;
+  width:33%;
 }
 .col-3 {
-    width:24%;
+  width:24%;
 }
 .col-2 {
-    width:16%;
+  width:16%;
 }
 .site-wrap {
   width:960px;
@@ -110,6 +111,7 @@ button:active {
   width:25px;
   margin:0 auto;
   display:none;
+  padding-bottom:10px;
 }
 #hb-icon:focus {
   outline:#E33009;
@@ -135,60 +137,35 @@ button:active {
 }
 @media only screen and (max-width:960px) {
   .col-t-12 {
-      width:100%;
-  }
-  .col-t-10 {
-      width:83%;
-  }
-  .col-t-9 {
-      width:75%;
-  }
-  .col-t-8 {
-      width:66%;
-  }
-  .col-t-6 {
-      width:50%;
-  }
-  .col-t-5 {
-      width:41%;
-  }
-  .col-t-4 {
-      width:33%;
-  }
-  .col-t-3 {
-      width:24%;
-  }
-  .col-t-2 {
-      width:16%;
-  }
+    width:100%;
 }
 @media only screen and (max-width:731px) {
   .col-m-12 {
-      width:100%;
+    width:100%;
   }
   .col-m-10 {
-      width:83%;
+    width:83%;
   }
   .col-m-9 {
-      width:75%;
+    width:75%;
   }
   .col-m-8 {
-      width:66%;
+    width:66%;
   }
   .col-m-6 {
-      width:50%;
+    width:50%;
   }
   .col-m-5 {
-      width:41%;
+    width:41%;
   }
   .col-m-4 {
-      width:33%;
+    width:33%;
   }
   .col-m-3 {
-      width:24%;
+    width:24%;
   }
   .col-m-2 {
-      width:16%;
+    width:16%;
   }
   p, ul li, button, a {
     font-size:11px;
@@ -211,11 +188,14 @@ button:active {
     display:block;
   }
   .active {
-    border-bottom:none;
     background:rgba(110,110,110,0.5);
+    border-bottom:none;
   }
   .header ul li {
     display:block;
+  }
+  .header ul li:hover {
+    background:rgba(227, 48, 9,0.7);
   }
   .intro h1 {
     font-size:28px;

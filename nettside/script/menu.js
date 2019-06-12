@@ -1,6 +1,5 @@
 var hbIcon = document.getElementById("hb-icon");
 var headerMenu = document.getElementById("header-menu");
-//headerMenu.style.display = "block";
 
 hbIcon.addEventListener("click",
 function() {
@@ -10,6 +9,11 @@ function() {
     headerMenu.style.display = "block";
   };
 });
+
+/*
+hbIcon.addEventListener("blur",function() {
+  headerMenu.style.display = "none";
+});*/
 
 window.onresize = function() {
   if(window.innerWidth >= "400") {
