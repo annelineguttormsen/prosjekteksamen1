@@ -5,6 +5,11 @@ html {
   margin:0;
   padding:0;
 }
+h1,h2,h3 {
+  font-family:Domine, serif;
+  color:#FDD923;
+  margin-bottom:20px;
+}
 p, ul li, button, a {
   font-family:Open Sans, Helvetica, sans-serif;
   color:#fff;
@@ -12,11 +17,6 @@ p, ul li, button, a {
 }
 a {
   color:#E33009;
-}
-h1,h2,h3 {
-  font-family:Domine, serif;
-  color:#FDD923;
-  margin-bottom:20px;
 }
 p {
   margin-bottom:20px;

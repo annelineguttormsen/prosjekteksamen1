@@ -7,6 +7,7 @@ var baseUrl = "https://api.spacexdata.com/v3/";
 var data;
 
 function getArchive(urlArg) {
+  archiveDiv.innerHTML ="<img id=\"loading-img\" src=\"media/loading.svg\">";
   //lag XHR basert på om det er i IE eller ikke
   if (window.XMLHttpRequest) {
       var xhr = new XMLHttpRequest();
@@ -44,6 +45,7 @@ function getArchive(urlArg) {
   xhr.send();
 }
 
+//funksjoner for å hente ulik informasjon
 function implementHistory() {
   archiveDiv.innerHTML = "";
   for (var i in data) {
@@ -61,8 +63,11 @@ function implementRockets() {
     var archiveRow = document.createElement("div");
     archiveRow.setAttribute("class","archive-row");
     makeElement("h1",data[i].rocket_name,archiveRow);
-    makeElement("p",data[i].description,archiveRow);
-    makeElement("img",null,archiveRow,"src",data[i].flickr_images[0]);
+    makeElement("p",("<b>Details: </b>" + data[i].description),archiveRow);
+    makeElement("p",("<b>Country: </b>" + data[i].country),archiveRow);
+    makeElement("p",("<b>First flight: </b>" + data[i].first_flight),archiveRow);
+    makeElement("a",(data[i].rocket_name + " Wikipedia page"),archiveRow,"href",data[i].wikipedia);
+    makeImgElement(null,archiveRow,data[i].flickr_images[0],(data[i].rocket_name));
     archiveDiv.appendChild(archiveRow);
   }
 }
@@ -72,7 +77,8 @@ function implementMissions() {
     var archiveRow = document.createElement("div");
     archiveRow.setAttribute("class","archive-row");
     makeElement("h1",data[i].mission_name,archiveRow);
-    makeElement("p",data[i].description,archiveRow);
+    makeElement("p",("<b>Details: </b>" + data[i].description),archiveRow);
+    makeElement("a",(data[i].mission_name + " wikipedia article"),archiveRow,"href",data[i].wikipedia);
     archiveDiv.appendChild(archiveRow);
   }
 }
@@ -83,7 +89,7 @@ function implementLaunches() {
     archiveRow.setAttribute("class","archive-row");
     makeElement("h1",data[i].mission_name,archiveRow);
     if(data[i].links.mission_patch_small !== null) {
-      makeElement("img",null,archiveRow,"src",data[i].links.mission_patch_small);
+      makeImgElement(null,archiveRow,data[i].links.mission_patch_small,(data[i].mission_name + " mission patch"));
     }
     makeElement("p",("<b>Rocket: </b>" + data[i].rocket.rocket_name),archiveRow);
     makeElement("p",("<b>Launch site: </b>" + data[i].launch_site.site_name_long),archiveRow);
@@ -100,6 +106,7 @@ function implementLaunches() {
   }
 }
 
+//lager element
 function makeElement(elementType, content, parentElement, attr, attrContent) {
   var element = document.createElement(elementType);
   if (attr !== undefined && attrContent !== undefined) {
@@ -108,8 +115,18 @@ function makeElement(elementType, content, parentElement, attr, attrContent) {
   element.innerHTML = content;
   parentElement.appendChild(element);
 }
+function makeImgElement(content,parentElement,srcContent,altContent) {
+  var element = document.createElement("img");
+  element.setAttribute("src",srcContent);
+  element.setAttribute("alt",altContent);
+  element.innerHTML = content;
+  parentElement.appendChild(element);
+}
 
+
+//hent launches med en gang siden loades
 getArchive("launches");
+
 
 selectEl.onfocus = function popUpOptions() {
   optionsEl.style.display = "block";
