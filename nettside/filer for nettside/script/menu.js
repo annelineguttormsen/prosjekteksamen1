@@ -1,0 +1,1 @@
+var hbIcon=document.getElementById("hb-icon"),headerMenu=document.getElementById("header-menu");hbIcon.addEventListener("click",function(){"block"==headerMenu.style.display?headerMenu.style.display="none":headerMenu.style.display="block"}),window.onresize=function(){"400"<=window.innerWidth?headerMenu.style.display="block":headerMenu.style.display="none"};
